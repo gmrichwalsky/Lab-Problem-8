@@ -17,13 +17,21 @@ int main()
 
     string input;
 
-    cout << "Enter a string or Q to quit: ";
-    cin >> input;
-    cout << "Vowel Count: " << countVowel(input) << endl;
+    while (true) {
+        cout << "Enter a string or Q to quit: ";
+        getline(cin, input);
+        
+        if (input == "Q") {
+            break;
+        }
+        else {
+            cout << "Vowel Count: " << countVowel(input) << endl;
+        }
+    }
 }
 
 int countVowel(string str) {
-    int strLen = str.size();
+    int strLen = str.length();
     int numVow = 0;
     char currentLetter;
     for (int i = 0; i < strLen; i++) {
