@@ -5,5 +5,5 @@
 
 int main()
 {
-    //Test
+    //Testing
 }
